@@ -3,7 +3,7 @@ import { Category, Product } from "./types";
 export const categories: Category[] = [
   { slug: "confiserie-backwaren", name: "Confiserie Backwaren", eyebrow: "Süss & ofenfrisch", description: "Klassische Marktfreuden zum Mitnehmen oder direkt Geniessen.", accent: "#D50072", image: "🥨" },
   { slug: "suesswaren", name: "Süsswaren", eyebrow: "Kleine Freuden", description: "Traditionelle Schweizer Süssigkeiten für den süssen Moment.", accent: "#8C174F", image: "🍬" },
-  { slug: "getraenke", name: "Getränke", eyebrow: "Warm & prickelnd", description: "Kaffeeklassiker, wärmende Tassen und feine Tropfen.", accent: "#6E7D55", image: "☕" },
+  { slug: "getraenke", name: "Getränke", eyebrow: "Warm & prickelnd", description: "Kaffeeklassiker, wärmende Tassen und feine Tropfen.", accent: "#8CCFC9", image: "☕" },
 ];
 
 export const products: Product[] = [

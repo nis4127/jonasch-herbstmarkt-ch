@@ -2,6 +2,14 @@
 
 Mobile-first Next.js App für das digitale Menü unter `jonasch-herbstmarkt.ch`. Die Oberfläche ist für das Öffnen über einen QR-Code auf Smartphones optimiert: grosse Touch-Ziele, reduzierte Navigation und klar lesbare Produktkarten.
 
+## Markenauftritt
+
+Das Hauptlogo der **Confiserie Jonasch** liegt unter `public/logo.png` und prägt die Confiserie- und Süsswarenbereiche mit Pink, Schwarz und Creme. Das Café-Logo liegt unter `public/cafe-logo.png`; die Getränke-Kategorie verwendet die dazu passende Türkis-/Braun-/Creme-Farbwelt. So bleibt die gemeinsame Marke erkennbar, während die beiden Bereiche visuell unterscheidbar sind.
+
+## Markt-Info
+
+Auf der Startseite werden der **Herbstmarkt auf dem Petersplatz** sowie die Öffnungszeiten **täglich von 11 bis 20 Uhr** prominent angezeigt.
+
 ## Erlaubte Menüstruktur
 
 Die Anwendung enthält ausschliesslich diese drei Kategorien und zwölf Produkte:
@@ -29,15 +37,3 @@ NEXT_PUBLIC_SANITY_DATASET=production
 ```
 
 Der Adapter in `src/lib/cms.ts` fragt die Typen `category` und `product` ab und lässt ausschliesslich die oben dokumentierte Whitelist durch.
-
-## Routing
-
-- `/` – mobiles QR-Menü und Kategorien
-- `/kategorie/confiserie-backwaren`
-- `/kategorie/suesswaren`
-- `/kategorie/getraenke`
-- `/produkt/[slug]` – Produktdetailseiten
-
-## Domain
-
-Für `jonasch-herbstmarkt.ch` kann die Domain nach dem Deployment auf den Next.js-Host zeigen.
