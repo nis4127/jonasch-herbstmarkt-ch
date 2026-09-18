@@ -2,9 +2,13 @@
 
 Mobile-first Next.js App für das digitale Menü unter `jonasch-herbstmarkt.ch`. Die Oberfläche ist für das Öffnen über einen QR-Code auf Smartphones optimiert: grosse Touch-Ziele, reduzierte Navigation und klar lesbare Produktkarten.
 
+## Standortseite
+
+Die Seite `/wo-sie-uns-finden` beschreibt den Herbstmarkt auf dem **Petersplatz in Basel**, die Öffnungszeiten **täglich von 11 bis 20 Uhr**, die Anreise ab Bahnhof SBB und Barfüsserplatz sowie die Orientierung zu den Jonasch-Ständen. Als Grundlage dient die informelle Standübersicht aus der bereitgestellten Word-Datei. Die enthaltenen Kartenlinks öffnen den Petersplatz direkt in Google Maps.
+
 ## Markenauftritt
 
-Das Hauptlogo der **Confiserie Jonasch** liegt unter `public/logo.png` und prägt die Confiserie- und Süsswarenbereiche mit Pink, Schwarz und Creme. Das Café-Logo liegt unter `public/cafe-logo.png`; die Getränke-Kategorie verwendet die dazu passende Türkis-/Braun-/Creme-Farbwelt. So bleibt die gemeinsame Marke erkennbar, während die beiden Bereiche visuell unterscheidbar sind.
+Das Hauptlogo der **Confiserie Jonasch** liegt unter `public/logo.png` und prägt die Confiserie- und Süsswarenbereiche mit Pink, Schwarz und Creme. Das Café-Logo liegt unter `public/cafe-logo.png`; die Getränke-Kategorie verwendet die dazu passende Türkis-/Braun-/Creme-Farbwelt.
 
 ## Markt-Info
 
