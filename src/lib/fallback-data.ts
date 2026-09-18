@@ -1,17 +1,22 @@
 import { Category, Product } from "./types";
 
 export const categories: Category[] = [
-  { slug: "herzhaft", name: "Herzhaft", eyebrow: "Vom Marktstand", description: "Knuspriges, Warmes und Deftiges für kühle Herbsttage.", accent: "#C6542D", image: "🍂" },
-  { slug: "suesse-sachen", name: "Süße Sachen", eyebrow: "Handgemacht", description: "Warme Lieblingsstücke und kleine Freuden zum Teilen.", accent: "#B8793E", image: "🍎" },
-  { slug: "getraenke", name: "Getränke", eyebrow: "Aus dem Kessel", description: "Wärmende Tassen und Erfrischungen aus der Region.", accent: "#6E7D55", image: "☕" },
+  { slug: "confiserie-backwaren", name: "Confiserie Backwaren", eyebrow: "Süss & ofenfrisch", description: "Klassische Marktfreuden zum Mitnehmen oder direkt Geniessen.", accent: "#C6542D", image: "🥨" },
+  { slug: "suesswaren", name: "Süsswaren", eyebrow: "Kleine Freuden", description: "Traditionelle Schweizer Süssigkeiten für den süssen Moment.", accent: "#B8793E", image: "🍬" },
+  { slug: "getraenke", name: "Getränke", eyebrow: "Warm & prickelnd", description: "Kaffeeklassiker, wärmende Tassen und feine Tropfen.", accent: "#6E7D55", image: "☕" },
 ];
 
 export const products: Product[] = [
-  { slug: "flammkuchen", category: "herzhaft", name: "Flammkuchen Elsässer Art", description: "Dünner, knuspriger Teig mit Crème fraîche, Speck und roten Zwiebeln.", price: "12.50", tag: "Bestseller", image: "🥨", ingredients: ["Weizen", "Milch", "Speck"] },
-  { slug: "kuerbis-suppe", category: "herzhaft", name: "Kürbissuppe", description: "Cremiger Hokkaido mit gerösteten Kürbiskernen und Kräuteröl.", price: "8.50", tag: "Vegetarisch", image: "🍲", ingredients: ["Kürbis", "Sellerie", "Kürbiskerne"] },
-  { slug: "raclette-brot", category: "herzhaft", name: "Raclette-Brot", description: "Kräftiger Bergkäse, Bauernbrot und eingelegte Gürkchen.", price: "9.50", image: "🧀", ingredients: ["Milch", "Gluten"] },
-  { slug: "apfelstrudel", category: "suesse-sachen", name: "Warmer Apfelstrudel", description: "Hausgemacht mit Zimt, Rosinen und einem Klecks Vanillesauce.", price: "7.50", tag: "Hausgemacht", image: "🥧", ingredients: ["Gluten", "Milch", "Ei"] },
-  { slug: "kuerbis-waffel", category: "suesse-sachen", name: "Kürbis-Waffel", description: "Goldbraun gebacken, mit Ahornsirup und gerösteten Haselnüssen.", price: "6.50", image: "🧇", ingredients: ["Gluten", "Nüsse", "Ei"] },
-  { slug: "apfelpunsch", category: "getraenke", name: "Warmer Apfelpunsch", description: "Naturtrüber Apfelsaft mit Zimt, Nelke und Orangenschale.", price: "5.00", tag: "Alkoholfrei", image: "🍵", ingredients: ["Apfel", "Orange"] },
-  { slug: "most", category: "getraenke", name: "Streuobst-Most", description: "Spritzig, naturtrüb und direkt von der lokalen Mosterei.", price: "4.50", image: "🍏", ingredients: ["Apfel"] },
+  { slug: "magenbrot", category: "confiserie-backwaren", name: "Magenbrot", description: "Würzige, glasierte Häppchen mit feinen Herbstgewürzen.", price: "6.00", tag: "Klassiker", image: "🍞", ingredients: ["Gluten", "Nüsse"] },
+  { slug: "gebrannte-mandeln", category: "confiserie-backwaren", name: "Gebrannte Mandeln", description: "Knackige Mandeln, frisch karamellisiert mit Zimt und Zucker.", price: "8.00", tag: "Frisch gemacht", image: "🌰", ingredients: ["Mandeln"] },
+  { slug: "rahmdaafeli", category: "confiserie-backwaren", name: "Rahmdääfeli", description: "Zarte Rahmkaramellen nach traditionellem Rezept.", price: "7.00", image: "🍬", ingredients: ["Milch"] },
+  { slug: "lebkuchen", category: "confiserie-backwaren", name: "Lebkuchen", description: "Duftender Lebkuchen mit Honig und winterlichen Gewürzen.", price: "5.50", image: "🍪", ingredients: ["Gluten", "Ei", "Milch"] },
+  { slug: "maessmoegge", category: "suesswaren", name: "Mässmögge", description: "Die typische Basler Süssigkeit mit knuspriger Hülle und Nussfüllung.", price: "6.50", tag: "Basler Tradition", image: "🥜", ingredients: ["Nüsse", "Gluten"] },
+  { slug: "nougat", category: "suesswaren", name: "Nougat", description: "Cremiger, zarter Nougat mit gerösteten Nüssen.", price: "6.50", image: "🍫", ingredients: ["Nüsse", "Ei"] },
+  { slug: "kaffeeklassiker", category: "getraenke", name: "Kaffeeklassiker", description: "Espresso, Kaffee Crème und Cappuccino – frisch zubereitet.", price: "4.00", image: "☕", ingredients: ["Milch auf Wunsch"] },
+  { slug: "teesorten", category: "getraenke", name: "Teesorten", description: "Ausgewählte Schwarz-, Kräuter- und Früchtetees.", price: "4.00", image: "🫖", ingredients: ["Je nach Sorte"] },
+  { slug: "kaffeelutz", category: "getraenke", name: "Kaffeelutz", description: "Schweizer Kaffeetradition mit einem Schuss Kirsch.", price: "7.50", tag: "Schweizer Klassiker", image: "🥃", ingredients: ["Kaffee", "Kirsch"] },
+  { slug: "prosecco", category: "getraenke", name: "Prosecco", description: "Prickelnder Genuss zum Anstossen auf einen schönen Markttag.", price: "7.00", image: "🥂", ingredients: ["Enthält Alkohol"] },
+  { slug: "wein", category: "getraenke", name: "Wein", description: "Eine feine Auswahl an Rot- und Weisswein aus der Region.", price: "7.00", image: "🍷", ingredients: ["Enthält Alkohol"] },
+  { slug: "gluehwein", category: "getraenke", name: "Glühwein", description: "Würziger Glühwein mit Zimt, Nelken und Orangenschale.", price: "6.00", tag: "Herbstwärme", image: "🍵", ingredients: ["Enthält Alkohol"] },
 ];

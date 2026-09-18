@@ -1,6 +1,16 @@
-# Jonasch Herbstmarkt – digitales Menü
+# Jonasch Herbstmarkt – digitales QR-Menü
 
-Next.js App Router mit Tailwind CSS und einer entkoppelten Content-Schicht für Sanity CMS.
+Mobile-first Next.js App für das digitale Menü unter `jonasch-herbstmarkt.ch`. Die Oberfläche ist für das Öffnen über einen QR-Code auf Smartphones optimiert: grosse Touch-Ziele, reduzierte Navigation und klar lesbare Produktkarten.
+
+## Erlaubte Menüstruktur
+
+Die Anwendung enthält ausschliesslich diese drei Kategorien und zwölf Produkte:
+
+- **Confiserie Backwaren:** Magenbrot, gebrannte Mandeln, Rahmdääfeli, Lebkuchen
+- **Süsswaren:** Mässmögge, Nougat
+- **Getränke:** Kaffeeklassiker, Teesorten, Kaffeelutz, Prosecco, Wein, Glühwein
+
+Die Fallback-Daten und die Sanity-Abfragen sind zusätzlich per Whitelist geschützt. Andere Produkte oder Kategorien werden nicht angezeigt.
 
 ## Entwicklung
 
@@ -11,24 +21,23 @@ npm run dev
 
 ## Sanity verbinden
 
-Die Anwendung läuft ohne Konfiguration mit lokalen Fallback-Daten. Für dynamische Inhalte werden diese Variablen gesetzt:
+Die Anwendung läuft ohne Konfiguration mit den festgelegten Fallback-Daten. Für dynamische Inhalte werden diese Variablen gesetzt:
 
 ```env
 NEXT_PUBLIC_SANITY_PROJECT_ID=dein-projekt
 NEXT_PUBLIC_SANITY_DATASET=production
 ```
 
-Der Adapter in `src/lib/cms.ts` fragt die Typen `category` und `product` ab. Empfohlene Felder:
-
-- `category`: `name`, `slug`, `eyebrow`, `description`, `accent`, `image`, `order`
-- `product`: `name`, `slug`, `category` (Referenz), `description`, `price`, `tag`, `image`, `ingredients`, `order`
+Der Adapter in `src/lib/cms.ts` fragt die Typen `category` und `product` ab und lässt ausschliesslich die oben dokumentierte Whitelist durch.
 
 ## Routing
 
-- `/` – Startseite und Kategorie-Kacheln
-- `/kategorie/[slug]` – Produktliste je Kategorie
-- `/produkt/[slug]` – Produktdetail
+- `/` – mobiles QR-Menü und Kategorien
+- `/kategorie/confiserie-backwaren`
+- `/kategorie/suesswaren`
+- `/kategorie/getraenke`
+- `/produkt/[slug]` – Produktdetailseiten
 
 ## Domain
 
-Für `jonasch-herbstmarkt.ch` kann die Domain nach dem Deployment auf den Next.js-Host zeigen. Die Anwendung ist bereits für die Domain-unabhängige Auslieferung vorbereitet.
+Für `jonasch-herbstmarkt.ch` kann die Domain nach dem Deployment auf den Next.js-Host zeigen.
