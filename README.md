@@ -58,3 +58,7 @@ NEXT_PUBLIC_SANITY_DATASET=production
 ```
 
 Der Adapter in `src/lib/cms.ts` fragt die Typen `category` und `product` ab und lässt ausschliesslich die oben dokumentierte Whitelist durch.
+
+## Online-Menü und Standortkarte
+
+Die aktuelle Menükarte ist online unter `/menuekarte-caffe-jonasch-herbstmesse-2026.pdf` abrufbar. Die QR-Startseite `/qr` zeigt den PDF-Link prominent vor dem direkten Getränke-Schnellzugriff und enthält eine mobile PDF-Lesevorschau. Die Standortseite `/wo-sie-uns-finden` verwendet die bereitgestellte Petersplatz-Karte mit den nummerierten Standorten 1 Bernoullistrasse, 2 Spalentor, 3 Pastel de Nata und 4 Petersgraben.
