@@ -16,7 +16,7 @@ Die dynamische Route `/qr` protokolliert einen anonymen Request in den Vercel-Lo
 /kategorie/getraenke?utm_source=qr&utm_medium=print&utm_campaign=herbstmesse-2026&utm_content=menu-card
 ```
 
-Damit können QR-Aufrufe in den Vercel-Logs und in einer später angeschlossenen datensparsamen Webanalyse als eigene Print-Kampagne ausgewertet werden. Es werden keine personenbezogenen Daten in der Anwendung gespeichert. Das PNG-Asset liegt unter `public/qr-menu-getraenke.png`. Die aktualisierte vorläufige Menükarte liegt als `PreislisteCaffeJonasch_Herbstmesse2026-mit-tracking-qr.pdf` im Projektroot.
+Damit können QR-Aufrufe in den Vercel-Logs und in einer später angeschlossenen datensparsamen Webanalyse als eigene Print-Kampagne ausgewertet werden. Es werden keine personenbezogenen Daten in der Anwendung gespeichert. Die aktuell publizierte Menükarte liegt unter `public/menuekarte-caffe-jonasch-herbstmesse-2026.pdf`; sie wird auch direkt auf der QR-Startseite als PDF-Lesevorschau angeboten.
 
 ## Standortseite
 
