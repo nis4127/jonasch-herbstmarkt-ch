@@ -4,6 +4,8 @@ import { CategoryTile } from "@/components/CategoryTile";
 import { getCategories, getProducts } from "@/lib/cms";
 import { ProductList } from "@/components/ProductCard";
 
+export const dynamic = "force-dynamic";
+
 export default async function Home() {
   const [categories, products] = await Promise.all([getCategories(), getProducts()]);
   const drinks = products.filter((product) => product.category === "getraenke");
