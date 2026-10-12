@@ -2,6 +2,22 @@
 
 Mobile-first Next.js App für das digitale Menü unter `jonasch-herbstmarkt.ch`. Die Oberfläche ist für das Öffnen über einen QR-Code auf Smartphones optimiert: grosse Touch-Ziele, reduzierte Navigation und klar lesbare Produktkarten.
 
+## Messbarer Menü-QR-Code
+
+Der druckfertige QR-Code verweist auf:
+
+```text
+https://jonasch-herbstmarkt-ch.vercel.app/qr
+```
+
+Die dynamische Route `/qr` protokolliert einen anonymen Request in den Vercel-Logs und leitet mit HTTP 307 direkt zur Getränkeauswahl weiter:
+
+```text
+/kategorie/getraenke?utm_source=qr&utm_medium=print&utm_campaign=herbstmesse-2026&utm_content=menu-card
+```
+
+Damit können QR-Aufrufe in den Vercel-Logs und in einer später angeschlossenen datensparsamen Webanalyse als eigene Print-Kampagne ausgewertet werden. Es werden keine personenbezogenen Daten in der Anwendung gespeichert. Das PNG-Asset liegt unter `public/qr-menu-getraenke.png`. Die aktualisierte vorläufige Menükarte liegt als `PreislisteCaffeJonasch_Herbstmesse2026-mit-tracking-qr.pdf` im Projektroot.
+
 ## Standortseite
 
 Die Seite `/wo-sie-uns-finden` beschreibt den Herbstmarkt auf dem **Petersplatz in Basel**, die Öffnungszeiten **täglich von 11 bis 20 Uhr**, die Anreise ab Bahnhof SBB und Barfüsserplatz sowie die Orientierung zu den Jonasch-Ständen. Als Grundlage dient die informelle Standübersicht aus der bereitgestellten Word-Datei. Die enthaltenen Kartenlinks öffnen den Petersplatz direkt in Google Maps.
@@ -29,6 +45,7 @@ Die Fallback-Daten und die Sanity-Abfragen sind zusätzlich per Whitelist gesch�
 ```bash
 npm install
 npm run dev
+npm run build
 ```
 
 ## Sanity verbinden
