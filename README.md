@@ -16,7 +16,7 @@ Die dynamische Route `/qr` protokolliert einen anonymen Request in den Vercel-Lo
 /kategorie/getraenke?utm_source=qr&utm_medium=print&utm_campaign=herbstmesse-2026&utm_content=menu-card
 ```
 
-Damit können QR-Aufrufe in den Vercel-Logs und in einer später angeschlossenen datensparsamen Webanalyse als eigene Print-Kampagne ausgewertet werden. Es werden keine personenbezogenen Daten in der Anwendung gespeichert. Die aktuell publizierte Menükarte liegt unter `public/menuekarte-caffe-jonasch-herbstmesse-2026.pdf`; sie wird auch direkt auf der QR-Startseite als PDF-Lesevorschau angeboten.
+Damit können QR-Aufrufe in den Vercel-Logs und in einer später angeschlossenen datensparsamen Webanalyse als eigene Print-Kampagne ausgewertet werden. Es werden keine personenbezogenen Daten in der Anwendung gespeichert. Die aktuell publizierte Menükarte liegt unter `public/menuekarte-caffe-jonasch-herbstmesse-2026.pdf` und wird bei jeder Aktualisierung vollständig ersetzt.; sie wird auch direkt auf der QR-Startseite als PDF-Lesevorschau angeboten.
 
 ## Standortseite
 
@@ -24,7 +24,7 @@ Die Seite `/wo-sie-uns-finden` beschreibt den Herbstmarkt auf dem **Petersplatz 
 
 ## Markenauftritt
 
-Das Hauptlogo der **Confiserie Jonasch** liegt unter `public/logo.png` und prägt die Confiserie- und Süsswarenbereiche mit Pink, Schwarz und Creme. Das Café-Logo liegt unter `public/cafe-logo.png`; die Getränke-Kategorie verwendet die dazu passende Türkis-/Braun-/Creme-Farbwelt.
+Das Hauptlogo der **Confiserie Jonasch** liegt unter `public/logo.png` und prägt die Confiserie- und Süsswarenbereiche mit Pink, Schwarz und Creme. Das vektorisierte Café-Logo liegt unter `public/logo-jonaschcafe-vektor.svg`; die Getränke-Kategorie verwendet die dazu passende Türkis-/Braun-/Creme-Farbwelt.
 
 ## Markt-Info
 
@@ -61,4 +61,4 @@ Der Adapter in `src/lib/cms.ts` fragt die Typen `category` und `product` ab und 
 
 ## Online-Menü und Standortkarte
 
-Die aktuelle Menükarte ist online unter `/menuekarte-caffe-jonasch-herbstmesse-2026.pdf` abrufbar. Die QR-Startseite `/qr` zeigt den PDF-Link prominent vor dem direkten Getränke-Schnellzugriff und enthält eine mobile PDF-Lesevorschau. Die Standortseite `/wo-sie-uns-finden` verwendet die bereitgestellte Petersplatz-Karte mit den nummerierten Standorten 1 Bernoullistrasse, 2 Spalentor, 3 Pastel de Nata und 4 Petersgraben.
+Die aktuelle Menükarte ist online unter `/menuekarte-caffe-jonasch-herbstmesse-2026.pdf` abrufbar. Die QR-Startseite `/qr` zeigt den PDF-Link prominent vor dem direkten Getränke-Schnellzugriff und enthält eine mobile PDF-Lesevorschau. Die Standortseite `/wo-sie-uns-finden` verwendet die bereitgestellte Petersplatz-Karte als SVG und bietet sie zusätzlich als PDF an mit den nummerierten Standorten 1 Bernoullistrasse, 2 Spalentor, 3 Pastel de Nata und 4 Petersgraben.
