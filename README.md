@@ -10,13 +10,19 @@ Der druckfertige QR-Code verweist auf:
 https://jonasch-herbstmarkt-ch.vercel.app/qr
 ```
 
-Die dynamische Route `/qr` protokolliert einen anonymen Request in den Vercel-Logs und leitet mit HTTP 307 direkt zur Getränkeauswahl weiter:
+Die dynamische Route `/qr` erhöht zusätzlich einen externen, datensparsamen Zähler und leitet mit HTTP 307 direkt zur aktuellen Menükarte weiter. Der Zählerdienst ist unabhängig von Vercel und hält den Zugriffszähler dauerhaft online, solange der Zähler aktiv verwendet wird:
 
 ```text
 /kategorie/getraenke?utm_source=qr&utm_medium=print&utm_campaign=herbstmesse-2026&utm_content=menu-card
 ```
 
-Damit können QR-Aufrufe werden pro Scan serverseitig in den Vercel-Logs protokolliert und in einer später angeschlossenen datensparsamen Webanalyse als eigene Print-Kampagne ausgewertet werden. Es werden keine personenbezogenen Daten in der Anwendung gespeichert. Die aktuell publizierte Menükarte liegt unter `public/menuekarte-caffe-jonasch-herbstmesse-2026.pdf` und wird bei jeder Aktualisierung vollständig ersetzt.; sie wird auch direkt auf der QR-Startseite als PDF-Lesevorschau angeboten.
+Der aktuelle Zählerstand kann über diesen öffentlichen Abruf eingesehen werden:
+
+```text
+https://abacus.jasoncameron.dev/get/jonasch-herbstmarkt-ch/jonasch_qr_scans_2026
+```
+
+Der Zähler erfasst nur die Anzahl der Aufrufe. Es werden keine personenbezogenen Daten in der Anwendung gespeichert. Die externe API begrenzt Anfragen pro IP und hält einen aktiven Zähler sechs Monate; regelmässige Nutzung verlängert diese Aktivität. Die aktuell publizierte Menükarte liegt unter `public/menuekarte-caffe-jonasch-herbstmesse-2026.pdf` und wird bei jeder Aktualisierung vollständig ersetzt.
 
 ## Standortseite
 
