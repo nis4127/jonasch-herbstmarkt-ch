@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { CounterAutoRefresh } from "@/components/CounterAutoRefresh";
 
 export const dynamic = "force-dynamic";
 
@@ -31,6 +32,7 @@ export default async function QrZaehlerPage() {
 
   return (
     <main className="counter-page">
+      <CounterAutoRefresh />
       <section className="counter-hero">
         <div className="counter-hero-top">
           <Link className="back-link" href="/">← Zur Hauptseite</Link>
@@ -68,7 +70,7 @@ export default async function QrZaehlerPage() {
 
         <div className="counter-note">
           <span className="counter-note-icon">i</span>
-          <p>Gezählt wird jeder Aufruf des QR-Endpunkts. Der Zähler erfasst nur die Anzahl der Zugriffe und keine persönlichen Daten.</p>
+          <p>Gezählt wird jeder Aufruf des QR-Endpunkts. Der Zähler erfasst nur die Anzahl der Zugriffe und keine persönlichen Daten. Diese Seite aktualisiert sich automatisch alle 30 Sekunden.</p>
         </div>
       </section>
     </main>
